@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<% if @certificate.pem.blank? %>
+  CErt is empty!
+<% end %>
+
+<p>
+  <strong>Pem:</strong>
+  <%= @certificate.pem %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @certificate.subject %>
+</p>
+
+<p>
+  <strong>Issuer:</strong>
+  <%= @certificate.issuer %>
+</p>
+
+<p>
+  <strong>Expires at:</strong>
+  <%= @certificate.expires_at %>
+</p>
+
+<%= link_to 'Edit', edit_certificate_path(@certificate) %> |
+<%= link_to 'Back', certificates_path %>
