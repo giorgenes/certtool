@@ -1,9 +1,9 @@
 class CertificatesController < ApplicationController
   before_action :set_certificate, only: %i[ show edit update destroy ]
 
-  # GET /certificates or /certificates.json
+  # GET /certificates?page=1 or /certificates.json
   def index
-    @certificates = Certificate.all
+    @certificates = Certificate.page params[:page]
   end
 
   # GET /certificates/1 or /certificates/1.json
