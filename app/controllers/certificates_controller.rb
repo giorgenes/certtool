@@ -64,6 +64,6 @@ class CertificatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def certificate_params
-      params.require(:certificate).permit(:pem, :subject, :issuer, :expires_at)
+      params.require(:certificate).permit(:pem, :subject, :issuer, :expires_at, :certtype)
     end
 end

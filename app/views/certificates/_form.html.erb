@@ -31,6 +31,9 @@
     <%= form.date_select :expires_at %>
   </div>
 
+
+  <%= form.select :certtype, [["Root", "0"], ["Intermediate", "1"], ["Leaf", "2"]] %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
